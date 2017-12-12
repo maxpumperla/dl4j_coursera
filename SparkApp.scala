@@ -14,7 +14,7 @@ import java.util
 object SparkApp {
     def main( args: Array[String] ) {
 
-      val conf = new SparkConf().setAppName("Keras import")
+      val conf = new SparkConf().setAppName("Keras import").setMaster("local[*]")
       val sc = new SparkContext(conf)
 
         val modelPath = args(0)
