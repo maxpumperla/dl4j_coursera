@@ -1,5 +1,5 @@
 // import org.apache.spark.SparkConf
-// import org.apache.spark.api.java.JavaSparkContext
+// import org.apache.spark.SparkContext
 import org.deeplearning4j.spark.api.TrainingMaster
 import org.deeplearning4j.spark.impl.multilayer.SparkDl4jMultiLayer
 import org.deeplearning4j.spark.impl.paramavg.ParameterAveragingTrainingMaster
@@ -14,10 +14,8 @@ import java.util
 object SparkApp {
     def main( args: Array[String] ) {
 
-//        val sparkConf = new SparkConf()
-//        sparkConf.setMaster("local[*]")
-//        sparkConf.setAppName("Keras import and Spark training")
-//        val sc = new JavaSparkContext(sparkConf)
+      // val conf = new SparkConf().setAppName("Keras import")
+      // val sc = new SparkContext(conf)
 
         val modelPath = args(0)
         val network: MultiLayerNetwork = KerasModelImport.importKerasSequentialModelAndWeights(modelPath);
