@@ -101,3 +101,5 @@ ENV/
 .mypy_cache/
 
 *.jar
+.idea/
+dl4j-keras-runner.iml

@@ -13,7 +13,7 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <dl4j.spark.version>0.9.1_spark_2</dl4j.spark.version>
-    <datavec.spark.version>0.9.1_spark_2</datavec.spark.version>
+    <datavec.spark.version>0.9.2-SNAPSHOT_spark_2</datavec.spark.version>
     <dl4j.version>0.9.2-SNAPSHOT</dl4j.version>
     <scala.binary.version>2.11</scala.binary.version>
   </properties>

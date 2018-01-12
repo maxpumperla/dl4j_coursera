@@ -18,8 +18,21 @@ $SPARK_HOME/bin/spark-submit \
        -dataFileName iris.txt
 ```
 
-For a keras 1 model, try `model_keras_1.h5` instead. To run this on a cluster you
-need to specify the Spark master `$MASTER` and remove `useSparkLocal`, i.e. run:
+For a keras 1 model, try `model_keras_1.h5` instead.
+
+In case you just have a model, but no data in CSV format to train or evaluate it with,
+set `-loadData false`. The model runner will then just import the model into DL4J and
+exit.
+
+To train a model, use `-train true` and set the number of epochs with the `-epochs` flag.
+
+You can upload jars to DSX with `wget`, for instance:
+
+```
+! wget target/dl4j-keras-runner-0.1-jar-with-dependencies.jar
+```
+
+To run this on a cluster, e.g. with DSX, you need to specify the Spark master `$MASTER` and remove `useSparkLocal`, i.e. run:
 
 ```
 $SPARK_HOME/bin/spark-submit \
