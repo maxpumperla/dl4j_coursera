@@ -36,7 +36,7 @@ import java.util.List;
  *    --master $MASTER \
  *    --files iris.txt irisModel.h5 \
  *    dl4j.jar
- *      -batchSizePerWorker 150 \
+ *      -batchSizePerWorker 15 \
  *      -indexLabel 4 \
  *      -numClasses 3 \
  *      -modelFileName model.h5 \
